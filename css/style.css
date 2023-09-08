@@ -1,0 +1,740 @@
+/* rolles */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0ededd0;
+    overflow-x: hidden;
+}
+
+/****************************** navbar **************************/
+
+.header{
+    width: 100%;
+    padding: 25px 0;
+    position: fixed;
+    background-color: #fff;
+    margin: auto;
+    z-index: 999;
+}
+
+.header .contianer{
+    padding: 0 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    width: 125px;
+}
+
+.list{
+    display: flex;
+}
+
+.list li{
+    margin-left: 50px;
+}
+
+.list li a{
+    color: #969494;
+}
+
+.list li a:hover{
+    color: #07ddf0;
+}
+
+.list li .active{
+    color: #07ddf0;
+}
+
+.btn-menu{
+    font-size: 25px;
+    color: #000;
+    display: none;
+}
+
+
+
+/*********************** home *******************/
+
+
+.home{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    background: url(../img/header.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0 , 0.8);
+}
+
+.home-content{
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    color: #fff;
+}
+
+.home-content p{
+    margin-bottom: 30px;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.home-content h1{
+    font-size: 50px;
+    font-weight: 400;
+    width: 650px;
+    line-height: 55px;
+}
+
+.home-content .button-home{
+    margin-top: 60px;
+}
+
+.home-content .button-home a{
+    color: #fff;
+    padding: 20px 70px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.home-content .button-home .second{
+    margin-left: 30px;
+    background-color:#07ddf0;
+    border: 1px solid #083282;    
+}
+
+.home-content .button-home .first:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.home-content .button-home .second:hover{
+    background-color: #fff;
+    color: #44C4F0;
+}
+
+.down-icon {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -250px;
+	padding: 45px 15px 15px;
+}
+
+.down-arrow {
+	animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-30px);
+  }
+	60% {
+    transform: translateY(-15px);
+  }
+}
+
+/**************************** botton scroll to top *******************************/
+
+.scroll-top{
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: 50px;
+    padding: 10px 20px;
+    background-color: #07ddf0;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.scroll-top a i {
+    color: #fff;
+}
+
+.scroll-top:hover{
+    box-shadow: 0 0 25px #07ddf0 , 0 0 50px #07ddf0 , 0 0 100px #07ddf0;
+}
+
+/************************************ history **************************************/
+
+
+.history{
+    text-align: center;
+    padding: 100px 0; 
+    position: relative;
+}
+
+.history-content{
+    position: absolute;
+    left: 325px;
+}
+
+.history-content h1{
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+
+.history-content p {
+    margin-top: 30px;
+    color: #a49e9e;
+    width: 900px;
+    margin-bottom: 100px;
+    font-size: 15px;
+}
+
+/******************************* portfolio ****************/
+
+.cards{
+    display: flex;
+    padding: 250px 0;
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height:auto;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card:hover .row{
+    transform: translateY(-100%);
+    height: 50%;
+}
+
+.card .row {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 0px;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #44C4F0;
+    transition: all .5s ease-out;
+}
+
+.card .row h5{
+    font-size: 20px;
+}
+
+.card .row p{
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.card .row .links{
+    margin-top: 40px;
+}
+
+
+.card .row .links a{
+        color: #fff;
+}
+
+/**************************** services *********************************/
+
+.service{
+    padding: 150px 0 ;
+}
+
+.services-cards{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    width: 80%;
+    gap: 30px;
+}
+
+.services-card{
+    width: 350px;
+    height: 350px;
+    padding: 50px;
+    background-color: #fff;
+}
+
+
+.services-card img{
+    padding-bottom:20px ;
+    border-bottom: 2px solid #07ddf0;
+}
+
+.services-card .services-info .hh{
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.services-card .services-info .pp{
+    margin-top: 40px;
+    font-weight: 100;
+    font-size: 13px ;
+    line-height: 35px;
+}
+
+/****************************** clients ******************************/
+
+.client{
+    background-color: #fff;
+    padding: 100px 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top-section{
+    margin-bottom: 100px;
+}
+
+.top-section h6{
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.top-section .pp1{
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0 400px;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+.top-section .signature{
+    font-size: 2px;
+    font-weight: 300;
+}
+
+.bottom-section img{
+    margin-left: 200px;
+}
+
+.bottom-section .first{
+    margin-left: -30px;
+}
+
+
+/*************************** contact *********************/
+
+.contact{
+    padding: 50px 30px;
+    background-color: #000000dc;
+    color: #ffd;
+}
+
+.contact-content{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid: 20px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.left-content{
+    padding: 80px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 20px;
+    margin-bottom: 30px;
+}
+
+.title span{
+    color: #07ddf0;
+}
+
+.left-content .line{
+    position: relative;
+    width: 70px;
+    height: 3px;
+    background-color: #07ddf0;
+    margin-left: 165px;
+    margin-bottom: 30px;
+}
+
+.left-content .pra{
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 100;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.right-content{
+    padding: 80px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.right-content title{
+    margin-bottom: 40px;
+}
+
+.right-content .inputs{
+    text-align: left;
+    margin: auto;
+}
+
+.right-content .email{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border-bottom: 2px solid #cccccc7c;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.right-content .active-bottom{
+    border-bottom: 3px solid #fff;
+}
+
+
+.right-content textarea{
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+    border-bottom: 2px solid #cccccc7c;
+    color: #fff;
+    margin-bottom: 30px;
+    resize: none;    
+}
+.submit-btn{
+    text-align: right;
+}
+.right-content .submit{
+    padding: 10px;
+    width: 80px;
+    background-color: transparent;
+    color: #07ddf0;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.right-content .submit:hover{
+    color: #fff;
+}
+
+/********************* footer **************************/
+
+.footer{
+    padding: 40px 200px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #07ddf0;
+    color: #fff;
+}
+
+.footer p span{
+    color: #0739f0;
+    font-size: 15px;
+    font-weight: 100;
+    transition: all 0.4s ease;
+}
+
+.footer p span:hover{
+    border-bottom: 1px solid #0739f0;
+}
+
+.footer .footer-content a{
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+/******************************* media query ****************************/
+
+@media ( max-width: 768px ) {
+    
+   *{
+    overflow: visible;
+   }
+
+   header,.home,.portfolio,.service,.client,.contact,.footer{
+    overflow:hidden ;
+   }
+
+   /****************************** navbar **************************/
+
+   .header{
+    padding: 20px 0;
+   }
+
+    .header .contianer{
+        padding: 0 50px;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header img{
+        width: 90px;
+    }
+    
+    .list{
+        display: block;
+        position: fixed;
+        padding: 40px;
+        right: -500px;
+        top: 70px;
+        z-index: 999;
+        background-color: #fff;
+        box-shadow:  0 0 25px #07ddf0 , 0 0 50px #07ddf0 ;
+        transition: all 0.9s ease;
+    }
+
+    .open{
+        right: 0;
+    }
+
+    .list li {
+        padding: 10px 20px;
+        text-align: center;
+        margin: auto ;
+        border-bottom: 1px solid #CCC;
+        width: 100%;
+    }
+    
+    .btn-menu{
+        display: block;
+        margin-right: -125px;
+        margin-bottom: -10px;
+        font-size: 25px;
+    }
+
+    /*********************** home *******************/
+
+
+.home-content{
+    position: absolute;
+    top: 200px;
+    left: 25px;
+    color: #fff;
+}
+
+.home-content p{
+    left: 50%;
+    top: 50%;
+    font-size: 15px;
+}
+
+.home-content h1{
+    font-size: 25px;
+    width: 325px;
+    line-height: 35px;
+    left: 50%;
+    top: 50%;
+}
+
+.home-content .button-home{
+    display: none;
+}
+
+
+.down-icon {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -350px;
+	padding: 45px 15px 15px;
+}
+
+/**************************** botton scroll to top *******************************/
+
+.scroll-top{
+    right: 400px;
+}
+
+.scroll-top a i {
+    color: #fff;
+}
+
+.scroll-top:hover{
+    box-shadow: 0 0 0px #07ddf0;
+}
+
+
+
+
+/************************************ history **************************************/
+
+
+.history{
+    text-align: center;
+    padding: 100px 0; 
+    position: relative;
+}
+
+.history-content{
+    position: absolute;
+    left: 10%;
+}
+
+.history-content h1{
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+
+.history-content p {
+    margin-top: 20px;
+    color: #a49e9e;
+    width: 300px;
+    margin-bottom: 100px;
+    font-size: 12px;
+}
+
+/******************************* portfolio ****************/
+
+.cards{
+    display: block;
+}
+
+.card{
+    left: 7%;
+    right : 7% ;
+    margin-bottom: 20px;
+}
+
+
+/**************************** services *********************************/
+
+
+.services-cards{
+    display: block;
+}
+
+.services-card{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/****************************** clients ******************************/
+
+
+.top-section{
+    margin-bottom: 50px;
+}
+
+
+.top-section .pp1{
+    width: 300px;
+    margin-left: -360px;
+}
+
+
+.bottom-section img{
+    text-align: center;
+    margin:  50px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.bottom-section .first{
+    text-align: center;
+    margin: auto;
+}
+
+
+/*************************** contact *********************/
+
+.contact{
+    padding: 50px 10px;
+}
+
+.contact-content{
+    display: block;
+    width: 80%;
+}
+
+.left-content{
+    padding: 30px;
+    width: 225px;
+    margin-bottom: 20px;
+}
+
+.left-content .line{
+    width: 80px;
+    margin-left: 80px;
+}
+
+.left-content .pra{
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 100;
+    width: 225px;
+    margin-left: 5px;
+}
+
+.right-content{
+    padding: 30px;
+    width: 225px;
+}
+
+/********************* footer **************************/
+
+.footer{
+    padding: 40px 0;
+    display: block;
+}
+
+.footer p{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer p span{
+    font-size: 10px;
+}
+
+.footer .footer-content{
+    font-size: 10px;
+    text-align: center;
+    margin: auto;
+}
+ 
+
+}
